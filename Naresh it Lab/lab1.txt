@@ -1,0 +1,39 @@
+1. Write a c program to swap the two Numbers third variable.
+I/P: a=10 b=20
+o/p: a=20 b=10
+ans:
+ #include <stdio.h>
+          void main()
+{
+      int a=10,b=20,c;
+       c=a;
+       a=b;
+       b=c;
+     printf ("a=%d,b=%d",a,b);
+      
+
+}
+       
+2. Write a c program to swap the two Numbers without  using third variable.
+I/P: a=10 b=20
+o/p: a=20 b=10
+ans:
+ #include<stdio.h>
+void main()
+{
+    int a=10,b=20;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("a=%d,b=%d",a,b);
+}
+      
+3. write a c program to perfrom addition of two numbers without using + operator.
+ans:
+#include <stdio.h>
+void main()
+{
+    int a1 = 10, b2 = 20, c3;
+    c3 = a1 - (-b2);
+    printf("%d", c3);
+}

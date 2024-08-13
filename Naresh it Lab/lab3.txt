@@ -1,0 +1,52 @@
+1. write a c program to reverse a two digit no without using any loop .
+i/p:13 o/p:31
+ans:
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n = 13 ;
+    printf("%d%d", n % 10, n / 10);
+}
+2. write a c program to find a previous multiplication of 100 of a given three digit number only .
+i/p:234 o/p:200
+ans:
+
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n = 13, c = 0, rev;
+    c = n % 10;
+    n = n / 10;
+    rev = c * 10 + n;
+    printf("%d", rev);
+}
+
+3. wirte a c program to add each digit of a given two digit  number.
+i/p:67 o/p:13
+ans:
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n = 67, a, b, c;
+    a = n % 10;
+    b = n / 10;
+    c = a + b;
+    printf("%d", c);
+}
+4. write a c program to find the next multiple of 10 of a given two digit number , if the given numbers last digit is less than 5 then find the previous multiple of 10 
+and if the given numbers last digit is greater than or equal to 5 then find the next multiple of 10.
+without using if else.
+ans:
+
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("Enter no:");
+    n % 10 >= 5 && printf("%d", ((n / 10) + 1) * 10) || printf("%d", n / 10 * 10);
+}

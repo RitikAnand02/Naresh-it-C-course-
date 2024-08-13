@@ -1,0 +1,99 @@
+1)
+Next Multiple of 10
+
+Write a c program to find the next multiple of 10 of a given two digit number, if the given number's last digit is less than 5 then 
+
+find the previous multiple of 10 and if the given number's last digit is greater than or equal to 5 then find the next multiple of 10.
+
+
+input as 24
+output:20
+
+input as 36
+output:40
+ans:
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n;
+    scanf("%d", &n);
+    printf("Enter no:");
+    n % 10 >= 5 && printf("%d", ((n / 10) + 1) * 10) || printf("%d", n / 10 * 10);
+}
+=======================
+2)Reverse A Number
+
+Write a C program to reverse 3 digit number without using any loops. 
+
+input :- 786
+
+output:- 687
+ans:
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int n = 786, c, d, rev;
+    c = n % 10;
+    n = n / 10;
+    d = n % 10;
+    n = n / 10;
+    rev = c * 100 + d * 10 + n;
+    printf("%d", rev);
+}
+======================
+
+3)Shopping Of TV
+
+A shopkeeper buys a TV set for Rs. 3500 and sells it at a profit of 27%. Apart from this a VAT of 12.7% and Service Charge is 3.87% is charged. 
+
+Write a C program to Display total selling price, profit along with vat and service charge.
+
+Cost Price: Rs. 3500
+Selling Price: Rs. 4445.00
+Profit: Rs. 945.00
+VAT: Rs. 564.52
+Service Charge: Rs. 171.02
+Total Selling Price: Rs. 5180.54
+ans:
+
+#include <stdio.h>
+void main()
+{
+    float cp = 3500, p, sp, vat, sc, ts;
+    p = cp * 27 / 100;
+    sp = cp + p;
+    vat = sp * 12.7 / 100;
+    sc = sp * 3.87 / 100;
+    ts = sp + vat + sc;
+    printf("%f\n%f\n%f\n%f\n%f\n%f\n",cp, p, sp, vat, sc, ts);
+}
+
+============================
+
+4)Find the Area
+
+Write a C program to calculate and print the area of a square and rectangle.
+
+input :-
+
+Side of square is : 5
+
+Length and breadth of rectanngle is : 4 , 5
+
+output:-
+
+Area of square is : 25
+
+Area of rectanngle is : 20
+ans:
+#include <stdio.h>
+void main()
+{
+    int s = 5, l = 4, b = 5, A, a;
+    A = s * s;
+    printf("Area of square:=%d\n", A);
+    a = l * b;
+    printf("Area of rectangle:=%d", a);
+}

@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+
+    short int i = 95;
+
+    char c = 97;
+
+    printf("%d, %d, %d\n", sizeof(i), sizeof(c), sizeof(c + i));
+
+    return 0;
+}

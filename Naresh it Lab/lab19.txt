@@ -1,0 +1,155 @@
+Write a C program that prompts the user to enter a number and then prints the multiplication table for that number using a while loop.
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, i = 1;
+    printf("Enter a number ");
+    scanf("%d", &n);
+    while (i <= 10)
+    {
+        printf("%d * %d =%d\n", n, i, i * n);
+        i++;
+    }
+}
+
+=================================================================================================================================================================================
+Write a C program to generate the Fibonacci sequence up to a given times using a while loop. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The program should prompt the user to enter a positive integer and then print the Fibonacci sequence up to that number.
+
+
+
+Input as:
+
+Enter how many Fibonacci series you want : 9 
+
+
+
+Output as:
+
+0 1 1 2 3 5 8 13 21
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, a = 0, b = 1, c, i = 1;
+    printf("Enter a no ");
+    scanf("%d", &n);
+    while (n >= i)
+    {
+        printf("%d  ", a);
+        c = a + b;
+        a = b;
+        b = c;
+        i++;
+    }
+}
+=================================================================================================================================================================================
+Write a C program to check if a given number is a palindrome. A palindrome is a number that remains the same when its digits are reversed. For example, 121, 454 and 767 are palindromic numbers. The program should prompt the user to enter a positive integer and determine whether it is a palindrome or not.
+
+
+
+Input as:
+
+Enter a number : 121 
+
+
+
+Output as:
+
+121 is a Palindrome number.
+ans:
+#include <stdio.h>
+int main()
+{
+    long m, n, rev = 0;
+    int r;
+    printf("Enter the no ");
+    scanf("%ld", &n);
+    m = n;
+    while (n)
+    {
+        r = n % 10;
+        rev = rev * 10 + r;
+        n = n / 10;
+    }
+    if (m == rev)
+    {
+        printf("palindrome");
+    }
+    else
+    {
+        printf("not");
+    }
+}
+=================================================================================================================================================================================
+Write a C program to check the given number is a perfect number or not?
+
+If a sum of the multiples of the number excluding the given number is same as the original number then we can say that number is a perfect number.
+
+6 multiples are 1,2,3,6 : sum of multiples = 1+2+3 = 6
+
+6 is a perfect number.
+ans:
+#include <stdio.h>
+int main()
+{
+    int num, i = 1, s = 0;
+    printf("Enter a number ");
+    scanf("%d", &num);
+    while (i < num)
+    {
+        if (num % i == 0)
+        {
+            s = s + i;
+        }
+        i++;
+    }
+    if (s == num)
+    {
+        printf(" %d perfect no and its sum = %d", num, s);
+    }
+}
+=================================================================================================================================================================================
+Write a C program to check if a given number is a strong number. A strong number is a positive integer in which the sum of the factorial of its digits is equal to the number itself. For example, 145 is a strong number since 1! + 4! + 5! = 145. The program should prompt the user to enter a positive integer and determine whether it is a strong number or not.
+
+
+
+Input as:
+
+Enter a number : 145 
+
+
+
+Output as:
+
+145 is a strong number.
+ans:
+#include <stdio.h>
+int main()
+{
+    int n,store_n, f, r, s = 0;
+    printf("Enter a number ");
+    scanf("%d", &n);
+    store_n = n;
+    while (n > 0)
+    {
+        r = n % 10;
+        f = 1;
+        while (r > 0)
+        {
+            f = f * r;
+            r--;
+        }
+        s = s + f;
+        n = n / 10;
+    }
+    if (s == store_n)
+    {
+
+        printf("strong no");
+    }
+    else
+    {
+        printf("not strong no");
+    }
+}

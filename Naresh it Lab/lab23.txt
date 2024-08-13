@@ -1,0 +1,219 @@
+1)Express as Sum Of prime
+Write a program in C to check whether a number can be expressed as the sum of two prime. 
+
+Sample Input
+Input as: 16
+Sample Output
+Output :
+
+16 = 3 + 13
+
+16 = 5 + 11
+Explanation
+-
+
+Note:
+Your code must be able to print the sample output from the provided sample input. However, your code is run against multiple hidden test cases. Therefore, your code must pass these hidden test cases to solve the problem statement.
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, s, s1, d;
+    printf("Enter the no:");
+    scanf("%d", &n);
+    for (int i = 2; i < n / 2; i++)
+    {
+        s = 0, s1 = 0, d = n - i;
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                s++;
+                break;
+            }
+        }
+        for (int j = 2; j < d; j++)
+        {
+            if (d % j == 0)
+            {
+                s1++;
+                break;
+            }
+        }
+
+        if (s == 0 && s1 == 0)
+        {
+            printf("%d=%d+%d\n", n, i, d);
+        }
+    }
+}
+===============================================================================================================
+2)Automorphic number
+Write a program to check given number is Automorphic number or not.
+
+Sample Input
+input =25
+Sample Output
+25 is Automorphic number.
+Explanation
+A number whose square ends in the same digits as the number itself. Example : 5,6,25 are automorphic numbers beacause 5*5=25 // last digit is 5 6*6=36 // last digit is 6 25*25=625 // last digits is 25
+
+Note:
+Your code must be able to print the sample output from the provided sample input. However, your code is run against multiple hidden test cases. Therefore, your code must pass these hidden test cases to solve the problem statement.
+ans:
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num, sq, temp, count = 0, flag = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    sq = num * num;
+
+    temp = num;
+    while (temp > 0)
+    {
+        count++;
+        temp /= 10;
+    }
+
+    temp = num;
+    for (int i = 0; i < count; i++)
+    {
+        if (temp % 10 != sq % 10)
+        {
+            flag = 0;
+            break;
+        }
+        temp /= 10;
+        sq /= 10;
+    }
+
+    if (flag)
+        printf("%d is an Automorphic number.\n", num);
+    else
+        printf("%d is not an Automorphic number.\n", num);
+
+    return 0;
+}
+===============================================================================================================
+3)All Prime Number
+Write a program in C to find the prime Numbers Between the given range 100 to 999
+Sample Input
+-
+Sample Output
+-
+Explanation
+-
+
+Note:
+Your code must be able to print the sample output from the provided sample input. However, your code is run against multiple hidden test cases. Therefore, your code must pass these hidden test cases to solve the problem statement.
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, m;
+    printf("Enter your two no ");
+    scanf("%d%d", &n, &m);
+    for (int i = n; i <= m; i++)
+    {
+        int c = 0;
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                c++;
+                break;
+            }
+        }
+        if (c == 0)
+        {
+            printf("%5d", i);
+        }
+    }
+}
+===============================================================================================================
+4)Find All Armstrong Number
+Write a C program to find all Armstrong numbers between 100 to 999.
+Sample Input
+153
+Sample Output
+153 is an Armstrong number because (1)^3+(5)^3+(3)^3 = 153.
+Explanation
+A three digit number is called Armstrong number if sum of cube of its digit is equal to number itself.
+
+Note:
+Your code must be able to print the sample output from the provided sample input. However, your code is run against multiple hidden test cases. Therefore, your code must pass these hidden test cases to solve the problem statement.
+ans:
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num, originalNum, remainder, result;
+
+    printf("Armstrong numbers between 100 and 999 are:\n");
+
+    for (num = 100; num <= 999; num++)
+    {
+        originalNum = num;
+        result = 0;
+
+        for (; originalNum != 0; originalNum /= 10)
+        {
+            remainder = originalNum % 10;
+            result += pow(remainder, 3);
+        }
+
+        if (result == num)
+        {
+            printf("%d\n", num);
+        }
+    }
+
+    return 0;
+}
+===============================================================================================================
+5)Strong Number
+Write a C program to find all strong numbers between 1 to 500.
+
+Sample Input
+input =145
+Sample Output
+145 is Strong number
+Explanation
+A Strong number whose sum of each digit's factorial is the number itself. example : 145 is an strong number. Explanation : 1!=1 4!=24 5!=120 So the sum of each digit factorial is 1+24+120 is equal to given input number that is 145.
+
+Note:
+Your code must be able to print the sample output from the provided sample input. However, your code is run against multiple hidden test cases. Therefore, your code must pass these hidden test cases to solve the problem statement.
+ans:
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+
+    for (int i = 1; i <= 500; i++)
+    {
+        int m, s = 0;
+        m = i;
+        while (m)
+        {
+            int r = m % 10;
+            int f = 1;
+            while (r)
+            {
+                f = f * r;
+                r--;
+            }
+            s = s + f;
+            m = m / 10;
+        }
+        if (s == i)
+        {
+            printf("%d ", s);
+        }
+    }
+}

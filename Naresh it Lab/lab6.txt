@@ -1,0 +1,102 @@
+1)Convert Centimeter to Inches
+
+Write a program that takes input from the user, take some input for centimeter and convert that into inches .
+
+input :- 1
+
+output:-0.3937
+
+input :- 20
+
+output:-7.87
+ans:
+#include <stdio.h>
+int main()
+{
+    float cm, inches;
+    printf("centimeters:");
+    scanf("%f", &cm);
+    inches = cm/2.54;
+    printf("%f", inches);
+}
+
+
+=====================
+3)Area of Different Shape
+
+Write a C program that takes 2 number as input and store that number in a variable, First input for radius of a Circle and 2nd input for side of a Square.
+
+Enter radius of Circle : 12
+
+Enter side of Square : 5
+
+Area of Circle is : 452.16
+
+Area of Square is : 25
+ans:
+#include <stdio.h>
+int main()
+{
+    float r, a, A, B;
+    printf("Radius:");
+    scanf("%f", &r);
+    printf("side of square:");
+    scanf("%f", &a);
+    A = 3.14 * r * r;
+    B = a * a;
+    printf("%f\n,%f", A, B);
+}
+=================
+
+4)ASCII Sum
+
+Write a C program to take two character input from the user and print the ASCII value of that two character and display its sum.
+
+Enter a character: a b
+
+ASCII value of a is : 97
+
+ASCII value of b is : 98
+
+ASCII sum of a & b is : 195
+ans:
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char c1, c2;
+    printf("Enter the first character:");
+    scanf("%c", &c1);
+    printf("Enter the second character:");
+    scanf(" %c", &c2);
+    printf("%c ASCII value is %d", c1, c1);
+
+    printf("\n%c ASCII value is %d", c2, c2);
+
+    printf("\nSum of %c & %c is %d\n", c1, c2, c1 + c2);
+}
+
+===============================
+
+5)Convert days in Y-M-D
+
+Write a program in C to input number of days. Find and display number of years, weeks, months and days.
+
+Input as : 390
+
+Output as : 1 Year, 3 Weeks, 0 Month, 4 Days
+ans:
+#include <stdio.h>
+int main()
+{
+    int n = 390, a, b, c, d;
+    a = n / 365;
+    n = n % 365;
+
+    b = n / 30;
+    n = n % 30;
+    c = n % 7;
+    d = n / 7;
+    n = n % 7;
+    printf("year:%d,weeks:%d,months:%d,days:%d", a, d, b, c);
+}

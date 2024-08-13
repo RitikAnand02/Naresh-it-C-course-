@@ -1,0 +1,145 @@
+Write a C program to check the given number is a prime number or not.
+
+
+
+Input as :
+
+Enter a number : 13
+
+Expected Output :
+
+13 is a Prime Number.
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, i, f;
+    printf("Enter your no ");
+    scanf("%d", &n);
+    for (i = 2; i < n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            f = 0;
+            break;
+        }
+    }
+    printf(f ? "prime no" : "not a prime no");
+}
+
+================================================================================================================================================================================
+Write a C program to add all the digits present in a given number until it became a single digit. Develop it by using while loop.
+
+[if the number is 5678, sum of digit =5+6+7+8=26 , again sum of digit of the sum : 2+6=8] 
+
+
+
+Input as : 5678
+
+
+
+Ouput as : 8
+
+ans:
+#include <stdio.h>
+int main()
+{
+    long n, s = 0, r;
+    printf("Enter your no ");
+    scanf("%ld", &n);
+    while (n > 9 || n < -9)
+    {
+        s = 0;
+        for (r = n; r != 0; r = r / 10)
+        {
+            s = s + r % 10;
+        }
+        n = s;
+    }
+    printf("%ld", s);
+    return 0;
+}
+================================================================================================================================================================================
+Write a C program to check the given number is perfect number or not. A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself). 
+
+
+
+Input as :
+
+Enter a number :28
+
+Output as :
+
+28 is a Perfect Number
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, i, s = 0;
+    printf("Enter the no ");
+    scanf("%d", &n);
+    for (i = 1; i <= n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            s = s + i;
+        }
+    }
+    if (n == s)
+    {
+        printf("perfect no");
+    }
+    else
+    {
+        printf("Not a perfect no");
+    }
+}
+
+================================================================================================================================================================================
+Write a C program that calculates the Highest Common Factor (HCF) of two numbers using for loops
+
+
+
+input as :
+
+Enter two numbers: 8 12
+
+The HCF of 8 and 12 is 4
+ans:
+#include <stdio.h>
+int main()
+{
+    int a, b, i, hcf;
+    printf("Enter a,b values ");
+    scanf("%d%d", &a, &b);
+    for (i = 1; i <= a && i <= b; i++)
+    {
+        if (a % i == 0 && b % i == 0)
+        {
+            hcf = i;
+        }
+    }
+    printf("the hcf of %d and %d =%d",a,b, hcf);
+}
+================================================================================================================================================================================
+Write a C program that calculates the sum of a factorial series up to a given number of terms.
+
+
+
+Enter the number of terms in the factorial series: 5
+
+The sum of the factorial series up to 5 terms is: 153
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, f = 1, i, s = 0;
+    printf("Enter your no ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        f = f * i;
+        s = s + f;
+    }
+    printf("sum of factorial series up to %d terms is %d", n, s);
+}

@@ -1,0 +1,200 @@
+Write a C program to accept id from user and display department.
+
+Id: 11 to 15 is Software department
+
+  16 to 20 is Developer department
+
+  21 to 23 is Management department
+ans:
+#include <stdio.h>
+int main()
+{
+    int id;
+    printf("Enter your id ");
+    scanf("%d", &id);
+    switch (id)
+    {
+    case 11 ... 15:
+    {
+        printf("Software department\n");
+        break;
+    }
+    case 16 ... 20:
+    {
+        printf("Developer department\n");
+        break;
+    }
+    case 21 ... 23:
+    {
+        printf("Management department\n");
+        break;
+    }
+    }
+}
+
+================================================================================================================================================================================
+Write a C program that will ask for a person’s name and his/her game score. Then it will ask for a second person’s name and score. The program will print the winner’s name and also print by how many 
+
+points that person won by comparing the scores. Develop this program by using switch case.
+ans:
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char name1[20], name2[20];
+    int score1, score2;
+    printf("Enter name of 1st person ");
+    scanf("%s", name1);
+    printf("Enter score ");
+    scanf("%d", &score1);
+    printf("Enter name of 2nd person ");
+    scanf("%s", name2);
+    printf("Enter score ");
+    scanf("%d", &score2);
+
+    switch (score1 > score2)
+    {
+    case 1:
+
+        printf(" winner name=%s\n", name1);
+        printf("points won=%d", score1 - score2);
+        break;
+
+    default:
+        printf("winner name=%s\n", name2);
+        printf("points won=%d", score2 - score1);
+        break;
+    }
+}
+================================================================================================================================================================================
+
+Develop below program using switch case)
+
+Write a C program that will read a float and a character from console. The character could be d for deposit or w for withdrawal.
+
+Starting with a Minimum balance of 2000.
+
+
+
+*Ask the user to initialize the minimum balance and don't allow 0 and -ve values if it is 0 or -ve then print "Ammount Can't be stored".
+
+
+
+*If the user want deposit operation then ask how much ammount he want to deposit and add that ammount
+
+ with balance and print the balance.
+
+*if the user want withdrwal operation then ask how much ammount he want to withdrwal and substract that 
+
+ ammount from the balance and print the balance.
+
+
+
+[Note: If the deposit ammount is negetive or 0 print "Invalid ammount".
+
+    If the withdrawl ammount is negetive , 0 or greater than balance then print "Invalid ammount"]
+
+
+
+Hints:
+
+-------
+
+Declare variables for the amount in float, balance in float and transaction code in char types.
+
+
+
+Test the transaction code, if ‘d’ it is deposit. Test the ammount so that it is not negative.
+
+If the balance is not negative or positive sum-up
+
+the balance.
+
+balance = balance + amount;
+
+Test the transaction code for withdrawal, ‘w’. If the transaction code is ‘w’
+
+Minus the withdrawn amount to update the
+
+balance.
+
+balance = balance - amount;
+
+And print the balance.
+ans:
+#include <stdio.h>
+int main()
+{
+    float amt, bal = 2000;
+    char ch;
+    printf("Enter the transction code ");
+    scanf(" %c", &ch);
+    switch (ch)
+    {
+    case 'd':
+        printf("Enter your amount ");
+        scanf("%f", &amt);
+        if (amt > 0)
+        {
+            bal += amt;
+            printf("total balance=%.2f", bal);
+        }
+        break;
+    case 'w':
+        printf("Enter your amount");
+        scanf("%f", &amt);
+        if (amt > 0)
+        {
+            if (amt > 2000)
+            {
+                bal -= amt;
+                printf("total balance=%.2f", bal);
+            }
+            else
+            {
+                printf("invalid amount");
+            }
+        }
+        break;
+    default:
+        printf("invalid id");
+    }
+}
+================================================================================================================================================================================
+Write a C program to take user Id as 1001 and Pasword as 1010. Ask the user to enter his id, if the id is valid 
+
+then ask the user to enter his password ,if the password is correct then print the name of the user, otherwise 
+
+the program will print incorrect Passoword and if the Id doesnot exits, the program will print Incorrect Id.
+
+develop this program by using Switch case. 
+ans:
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int id, pass;
+    char name[20];
+    printf("Enter your name ");
+    scanf("%s", name);
+    printf("Enter the id ");
+    scanf("%d", &id);
+    switch (id)
+    {
+    case 1001:
+        printf("Enter your password ");
+        scanf("%d", &pass);
+        switch (pass)
+        {
+        case 1010:
+              printf("%s",name);
+            break;
+        default:
+            printf("invald password");
+        }
+        break;
+    default:
+        printf("invaild id");
+        break;
+    }
+}
