@@ -1,0 +1,211 @@
+Write the logic for thee below pattern in c ?
+
+
+
+    1       2       3 
+
+   6       5       4
+
+   7       8       9
+
+ 12      11     10
+
+ 13     14     15 
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, m;
+    printf("Enter rows and columns ");
+    scanf("%d%d", &n, &m);
+    int k = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            if (i % 2 == 0)
+            {
+                printf("%3d", --k);
+            }
+            else
+            {
+                printf("%3d", k++);
+            }
+        }
+        k += 3;
+        printf("\n");
+    }
+}
+=================================================================================================================================================================================
+Write the logic for the below program?
+
+
+
+1 
+
+2     6
+
+3     7     10
+
+4     8     11     13
+
+5     9     12     14     15
+ans:
+#include <stdio.h>
+int main()
+{
+    int n, j;
+    printf("Enter rows ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        int num = i;
+        for (int j = 1; j <= i; j++)
+        {
+
+            printf("%3d", num);
+            num += n - j;
+        }
+        printf("\n");
+    }
+}
+=================================================================================================================================================================================
+Write the logic for the below program in c ?
+
+
+
+                           1
+
+                  4       9
+
+       16     25     36   
+
+49   64     81   100
+ans:
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int a = 1;
+    printf("Enter rows ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+
+        for (int k = 1; k <= n - i; k++)
+        {
+            printf("     ");
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%5d", a * a);
+            a++;
+        }
+        printf("\n");
+    }
+}
+=================================================================================================================================================================================
+Write the logic for the below program ?
+
+
+
+                       1
+
+              2       4
+
+      3      6       9
+
+4    8    12     16
+ans:
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    
+    printf("Enter rows ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+
+        for (int k = 1; k <= n - i; k++)
+        {
+            printf("     ");
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            printf("%5d", i*j);
+            
+        }
+        printf("\n");
+    }
+}
+
+=================================================================================================================================================================================
+Write the logic for the below program in c?
+
+
+
+1
+
+1  2   1
+
+1  2   3   2   1
+
+1  2   3   4   3   2   1
+
+1  2   3   4   5   4   3   2   1
+ans:
+#include <stdio.h>
+int main()
+{
+    int i, j, n;
+    printf("Enter rows ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        for (j = 1; j <= i; j++)
+        {
+            printf("%3d", j);
+        }
+
+        for (int k = i - 1; k >= 1; k--)
+        {
+            printf("%3d", k);
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+
+method-2:
+#include <stdio.h>
+int main()
+{
+    int i, j, n;
+    printf("Enter rows ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        int pr_a = i - 1;
+        for (j = 1; j <= 2 * i - 1; j++)
+        {
+            if (j <= i)
+            {
+                printf("%3d ", j);
+            }
+            else
+            {
+
+                printf("%3d", pr_a--);
+            }
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
