@@ -1,4 +1,4 @@
-// sorting - Arranging data in a order.. using Bubble sorting...ascending order...
+// sorting - Arranging data in a order.. using Bubble sorting...Descending order...
 
 #include <stdio.h>
 int main()
@@ -13,9 +13,9 @@ int main()
     }
     for (i = 0; i <= n - 2; i++)
     {
-        for (j = 0; j <= n - i; j++)
+        for (j = 0; j <= n - i - 2; j++)
         {
-            if (a[j] > a[j + 1])
+            if (a[j] < a[j + 1])
             {
                 t = a[j];
                 a[j] = a[j + 1];

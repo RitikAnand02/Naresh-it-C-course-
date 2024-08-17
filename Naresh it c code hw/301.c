@@ -1,4 +1,4 @@
-// sorting - Arranging data in a order.. using Bubble sorting...ascending order...
+// sorting - Arranging data in a order.. using slection sorting...Descending order...
 
 #include <stdio.h>
 int main()
@@ -11,15 +11,15 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    for (i = 0; i <= n - 2; i++)
+    for (i = 0; i < n - 2; i++)
     {
-        for (j = 0; j <= n - i; j++)
+        for (j = i + 1; j <= n - 1; j++)
         {
-            if (a[j] > a[j + 1])
+            if (a[i] < a[j])
             {
-                t = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = t;
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
             }
         }
     }
