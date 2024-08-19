@@ -1,0 +1,253 @@
+
+
+Write a C program to Sort the array in ascending order and print it.
+
+
+Input as :
+
+Enter array size : 6
+
+Enter 6 element : 4 3 5 6 2 1
+
+
+Output as :
+
+After sorting in ascending order :
+
+1 2 3 4 5 6
+ans:
+#include <stdio.h>
+int main()
+{
+    int a[100], n, i, j, t;
+    printf("Enter array size 1-100 ");
+    scanf("%d", &n);
+    printf("Enter %d elemnets ", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = i + 1; j <= n - 1; j++)
+        {
+            if (a[i] > a[j])
+            {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+        }
+    }
+    printf("After Sorting ascending order ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%4d", a[i]);
+    }
+
+    return 0;
+}
+
+
+=======================================================================================================================
+
+
+Write a C program to Sort the array in descending order and print it.
+
+
+Input as :
+
+Enter array size : 6
+
+Enter 6 element : 4 3 5 6 2 1
+
+
+Output as :
+
+After sorting in ascending order :
+
+6 5 4 3 2 1
+ans:
+#include <stdio.h>
+int main()
+{
+    int a[100], n, i, j, t;
+    printf("Enter array size 1-100 ");
+    scanf("%d", &n);
+    printf("Enter %d elemnets ", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = i + 1; j <= n - 1; j++)
+        {
+            if (a[i] < a[j])
+            {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+        }
+    }
+    printf("After Sorting descending order ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%4d", a[i]);
+    }
+
+    return 0;
+}
+
+
+=======================================================================================================================
+
+
+Write a C program to find the element given by user is present in the 
+
+array or not 
+
+If the element is present in the array also programmer have to print 
+
+index position of that searching element.
+
+If the user pass the element for searching in the array is not present
+
+then also provide a appropriate message to the user that element is not 
+
+present inside the array.
+
+
+Input 1:-
+
+[1,2,3,4,5,6,7]
+
+
+Enter the number you want to search : 5
+
+
+Output :-
+
+
+The element which you have sreached is present inside the 4rth index 
+
+
+Input 2:-
+
+[1,2,3,4,3,6]
+
+
+Enter the number you want to search : 9
+
+
+Output :
+
+
+The element which you have sreached is not present inside the Array.
+
+ans:
+#include <stdio.h>
+int main()
+{
+    int a[100], i, n, ele, f = 0;
+    printf("Enter array size 1- 100 ");
+    scanf("%d", &n);
+    printf("Enter %d integers ", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    printf("Enter elements to search ");
+    scanf("%d", &ele);
+    for (i = 0; i < n; i++)
+    {
+        if (a[i] == ele)
+        {
+            printf("%d in %d index\n", ele, i, f = 1);
+        }
+    }
+    if (f == 0)
+    {
+        printf("%d not found", ele);
+    }
+
+    return 0;
+}
+=====================================================================================================================
+Write a C program to find the min element from an array.
+
+
+Input as :
+
+Enter array size : 5
+
+Enter 5 elements : 4 5 3 6 2
+
+Min element is : 2
+ans:
+#include <stdio.h>
+int main()
+{
+    int a[100], n, i, min;
+
+    printf("Enter array size 1- 100 ");
+    scanf("%d", &n);
+    if (n < 1 || n > 100)
+        printf("Array size 1-100 only ");
+    else
+    {
+        printf("enter %d elements ", n);
+
+        for (i = 0; i < n; i++)
+        {
+            scanf("%d", &a[i]);
+        }
+        for (min = a[0], i = 1; i < n; i++)
+        {
+            if (min > a[i])
+                min = a[i];
+        }
+
+        printf("min elements=%d ", min);
+    }
+    return 0;
+}
+========================================================================================================================
+
+Write a C program to find the max element from an array.
+
+
+Input as :
+
+Enter array size : 5
+
+Enter 5 elements : 4 5 3 6 2
+
+Man element is : 6
+ans:
+#include <stdio.h>
+int main()
+{
+    int a[100], n, i, max, min;
+
+    printf("Enter array size 1- 100 ");
+    scanf("%d", &n);
+    if (n < 1 || n > 100)
+        printf("Array size 1-100 only ");
+    else
+    {
+        printf("enter %d elements ", n);
+
+        for (i = 0; i < n; i++)
+        {
+            scanf("%d", &a[i]);
+        }
+        for (max = a[0], i = 1; i < n; i++)
+        {
+            if (max < a[i])
+                max = a[i];
+                }
+
+        printf("max elements=%d ", max);
+    }
+    return 0;
+}
