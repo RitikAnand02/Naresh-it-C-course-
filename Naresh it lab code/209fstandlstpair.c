@@ -17,7 +17,7 @@ For example, given the array: [2, 5, 1, 6, 7, 9, 8, 3], the expected output shou
 #include <stdio.h>
 int main()
 {
-    int a[100], i, n;
+    int a[100], j,i, n;
 
     printf("Enter array size 1 - 100 ");
     scanf("%d", &n);
@@ -26,18 +26,16 @@ int main()
 
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
-    if (n % 2 == 0)
+    i = 0, j = n - 1;
+    while (i < j)
     {
-        for (i = 0; i < n / 2; i++)
-            printf("[%d , %d]\n", a[i], a[n - 1 - i]);
+        printf("(%d , %d)\n", a[i], a[j]);
+        i++;
+        j--;
     }
-    else if (i != n - 1 - i)
+    if (n % 2 != 0)
     {
-        for (i = 0; i < (n / 2) + 1; i++)
-            printf("[%d , %d]\n", a[i], a[n - 1 - i]);
-    }
-    else
-    {
-        printf("%d", a[i]);
+
+        printf("%d", a[n / 2]);
     }
 }

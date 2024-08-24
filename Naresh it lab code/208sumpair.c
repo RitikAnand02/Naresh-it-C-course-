@@ -29,24 +29,21 @@ Expected output :
 int main()
 {
     int a[100], i, j, n, s;
-
     printf("Enter array size 1 - 100 ");
     scanf("%d", &n);
-
     printf("Enter %d integers ", n);
-
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
     printf("Enter the pair of sum ");
     scanf("%d", &s);
-    for (i = 0; i < n / 2; i++)
-
-        for (j = n - 1; j >= i + 1; j--)
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
         {
-
             if (a[i] + a[j] == s)
             {
-                printf("[%d , %d]\n", a[i], a[j]);
+                printf("(%d , %d)\n", a[i], a[j]);
             }
         }
+    }
 }
