@@ -6,8 +6,7 @@ Create a program that compresses a string by replacing repeated characters with 
 #include <stdio.h>
 int main()
 {
-    char s[100], result[100];
-    int idx = 0;
+    char s[100];
     printf("Enter a string ");
     gets(s);
     for (int i = 0; s[i] != '\0'; i++)
@@ -17,18 +16,15 @@ int main()
         {
             if (s[i] == s[j])
             {
-                s[j] = '1';
+                s[j] = ' ';
                 count++;
             }
         }
 
-        if (count != 1 && s[i] != '1')
+        if (count != 1 && s[i] != ' ')
         {
-            result[idx++] = s[i];
-            result[idx++] = count + 48;
+            printf("%c%d", s[i], count);
         }
     }
-    result[idx] = '\0';
-    printf("%s", result);
     return 0;
 }

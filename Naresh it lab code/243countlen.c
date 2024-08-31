@@ -6,14 +6,18 @@ Write a C program to count the number of alphabet present in a given String
 #include <stdio.h>
 int main()
 {
-    char s[100];
-    int i;
-    printf("Enter the strings ");
-    gets(s);
-    for (i = 0; s[i] != '\0'; i++)
-        ;
+    char s[20], c = 0;
+    // scanf("%[^\n]",s);
+    scanf("%s", s);
 
-    printf("Length=%d\n", i);
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
+        {
+            c++;
+        }
+    }
+    printf("%d", c);
 
     return 0;
 }

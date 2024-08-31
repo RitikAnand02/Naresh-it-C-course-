@@ -1,0 +1,229 @@
+Q1)Descending Order
+Write a c program to sort the String in Descending Order  ,after sorting print the result in string
+format?  
+Sample Input
+Input as :- "CoreJava"
+Sample Output
+Before sorting the array
+
+CoreJava
+
+
+After sorting the array
+
+vroeaaJC
+ans:
+#include <stdio.h>
+int main()
+{
+    char s[30];
+    int i, j, t;
+    printf("Enter a string ");
+    gets(s);
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (j = i + 1; s[j] != '\0'; j++)
+        {
+            if (s[i] < s[j])
+            {
+                t = s[i];
+                s[i] = s[j];
+                s[j] = t;
+            }
+        }
+    }
+    for (i = 0; s[i] != '\0'; i++)
+        printf("%c", s[i]);
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2)String in Ascending
+Write a c program to sort the String in ascending order ,after sorting print the result in string
+format? 
+Sample Input
+Input as :- "CoreJava"
+Sample Output
+output as:-
+
+Before sorting the array
+
+CoreJava
+
+
+After sorting the array
+
+CJaaeorv
+ans:
+#include <stdio.h>
+int main()
+{
+    char s[30];
+    int i, j, t;
+    printf("Enter a string ");
+    gets(s);
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (j = i + 1; s[j] != '\0'; j++)
+        {
+            if (s[i] > s[j])
+            {
+                t = s[i];
+                s[i] = s[j];
+                s[j] = t;
+            }
+        }
+    }
+    for (i = 0; s[i] != '\0'; i++)
+        printf("%c", s[i]);
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3)Palindrome or Not .
+Write a c program to check the String is Palindrome  or Not .
+Sample Input
+madam
+Sample Output
+madam is palindrome string.
+ans:
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+int main()
+{
+    char s[100];
+    int i, j;
+    printf("Enter the strings ");
+    gets(s);
+    for (i = 0; s[i] != '\0'; i++)
+        ;
+    for (j = 0; j < i / 2; j++)
+    {
+        if (tolower(s[j]) != tolower(s[i - j - 1]))
+        {
+            puts("Not a palidrome");
+            getch();
+            return 0;
+        }
+    }
+    puts("Palidrome");
+    getch();
+
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q4)Anagram
+Write a c Program to check whether two given strings are anagram of each other or not.
+Sample Input
+input 1:- listen
+
+input 2:- silent
+
+
+input 1:- Jack
+
+input 2:- Jake
+Sample Output
+this are anagram String
+
+
+this is not are anagram String
+ans:
+#include <stdio.h>
+int main()
+{
+    char a[100], b[100];
+    int i, n, j, t;
+
+    printf("Enter string 1 ");
+    gets(a);
+    printf("Enter string 2 ");
+    gets(b);
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        for (j = i + 1; a[j] != '\0'; j++)
+        {
+            if (a[i] > a[j])
+            {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+            if (b[i] > b[j])
+            {
+                t = b[i];
+                b[i] = b[j];
+                b[j] = t;
+            }
+        }
+    }
+
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        if (a[i] != b[i])
+        {
+            printf(" Not a Anagram");
+            return 0;
+        }
+    }
+    printf("Anagram");
+}
+
+----------------------------------------------------------------------
+
+Q5)The frequency of character
+Write a c program to print all the frequency of character present .
+Sample Input
+String s=" Hello Everyone"
+Sample Output
+The frequency of H is 1
+
+The frequency of e is 3
+
+The frequency of l is 2
+
+The frequency of o is 2
+
+The frequency of   is 1  --------THIS IS FOP CHECKING THE SPACE COUNT 
+
+The frequency of E is 1
+
+The frequency of v is 1
+
+The frequency of r is 1
+
+The frequency of y is 1
+
+The frequency of n is 1
+ans:
+#include <stdio.h>
+void main()
+{
+    char a[100];
+    int b[100];
+    int i, n, c, j;
+
+    printf("Enter string ");
+    gets(a);
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        if (b[i] != -1)
+        {
+            for (c = 1, j = i + 1; a[j] != '\0'; j++)
+            {
+                if (a[i] == a[j])
+                {
+                    c++;
+                    b[j] = -1;
+                }
+            }
+            b[i] = c;
+        }
+    }
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        if (b[i] != -1)
+            printf("The frequency of %c is %d\n", a[i], b[i]);
+    }
+}
