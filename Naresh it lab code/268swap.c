@@ -35,8 +35,7 @@ void swap(int *a, int *b, int *c)
 void main()
 {
     int a = 5, b = 6, c = 7;
-    int *x = &a, *y = &b, *z = &c;
     printf("The value before swapping are :\na=%d\nb=%d\nc=%d\n", a, b, c);
-    swap(x, y, z);
+    swap(&a, &b, &c);
     printf("The value after swapping are :\na=%d\nb=%d\nc=%d", a, b, c);
 }

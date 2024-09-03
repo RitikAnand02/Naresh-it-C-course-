@@ -1,8 +1,5 @@
-for (int i = n - 1; i <= n; i++)
+ // else
     // {
-    //     for (int j = 1; j <= i; j++)
-    //     {
-    //         printf("%d", i);
-    //     }
-    //     printf("\n");
+    //     m = len / 2;
+    //     printf(" median=%.2f\n", a[m]);
     // }

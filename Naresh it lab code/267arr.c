@@ -25,39 +25,18 @@ element - 4 : 8
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 int main()
 {
-    int *p, n, i;
-    printf("Enter array size ");
+    int arr[100], n, i;
+    printf("Enter the array size ");
     scanf("%d", &n);
-    p = (int *)malloc(n * sizeof(int));
-    printf("Enter %d integers ", n);
-    for (i = 0; i < n; i++)
-        scanf("%d", &p[i]);
+    printf("Enter %d array elements ", n);
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+    int *ptr = arr;
     printf("Elements are ");
     for (i = 0; i < n; i++)
-        printf("%4d", p[i]);
-    free(p);
-    p = NULL;
-    return 0;
+    {
+        printf("%2d", *(ptr + i));
+    }
 }
-
-// Method-2....
-
-// #include <stdio.h>
-// int main()
-// {
-//     int arr[100], n, i;
-//     printf("enter the array size");
-//     scanf("%d", &n);
-//     printf("enter %d array elements", n);
-//     for (int i = 0; i < n; i++)
-//         scanf("%d", &arr[i]);
-//     int *ptr = &arr;
-//     printf("elemets are");
-//     for (i = 0; i < n; i++)
-//     {
-//         printf("%d", *(ptr + i));
-//     }
-// }
