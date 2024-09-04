@@ -1,3 +1,8 @@
+/*
+Even or Odd
+Write a program in C to check if a given number is even or odd using the function.
+*/
+
 // Fucntions with arugments , with return values...in even odd...
 
 #include <stdio.h>
@@ -12,9 +17,9 @@ int main() // caller
     printf("Enter a values ");
     scanf("%d", &a);
     if (evenodd(a))// fun calling , a is actual parameter
-        puts("even");
-    else
         puts("odd");
+    else
+        puts("even");
 
     return 0;
 }

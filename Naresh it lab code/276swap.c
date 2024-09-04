@@ -1,4 +1,8 @@
-// swapping of two integers in call by address...
+/*
+Swap Number
+Write a program in C to swap two numbers using a function.
+*/
+
 #include <stdio.h>
 #include <conio.h>
 int swap(int *a, int *b)

@@ -11,10 +11,10 @@ int main() // caller
     int a;
     printf("Enter a values ");
     scanf("%d", &a);
-    if (evenodd(a))// fun calling , a is actual parameter
-        puts("even");
-    else
+    if (evenodd(a)) // fun calling , a is actual parameter
         puts("odd");
+    else
+        puts("even");
 
     return 0;
 }
