@@ -1,0 +1,190 @@
+1)Palindrome.
+Implement a function to check if a given string is a palindrome.
+Sample Input
+Input: radar
+
+
+Input: hello
+Sample Output
+Output: The string is a palindrome.
+
+
+Output: The string is not a palindrome.
+ans:
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+void pali(char[]);
+int main()
+{
+    char s[100];
+    printf("Enter a string ");
+    gets(s);
+    pali(s);
+}
+void pali(char s[])
+{
+    int i, j;
+    for (i = 0; s[i] != '\0'; i++)
+        ;
+    for (j = 0; j < i / 2; j++)
+    {
+        if (tolower(s[j]) != tolower(s[i - j - 1]))
+        {
+            puts("Not a palidrome");
+            return;
+        }
+    }
+    puts("Palidrome");
+    return;
+}
+=================================================================================================================
+
+2)Sum of all elements
+Create a function to calculate the sum of all elements in an integer array.
+Sample Input
+Input:
+
+Size of the array: 5
+
+Array elements: 10 20 30 40 50
+Sample Output
+Output:
+
+Sum of all elements in the array: 150
+ans:
+#include <stdio.h>
+int sum(int);
+int main()
+{
+    int n;
+    printf("Enter array size ");
+    scanf("%d", &n);
+    printf("Enter array %d elements ", n);
+    int s = sum(n);
+    printf("%d", s);
+}
+int sum(int n)
+{
+    int a[100], i, j, s = 0;
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    for (i = 0; i < n; i++)
+        s += a[i];
+    printf("Sum of all elements in the array: ");
+    return s;
+}
+================================================================================================================
+3)Contains only digits.
+Create a function to check if a string contains only digits.
+Sample Input
+Input:
+
+String: 12345
+
+Input:
+
+String: 45A7
+Sample Output
+Output:
+
+The string contains only digits
+
+Output:
+
+The string contains non-digit characters.
+ans:
+#include <stdio.h>
+void pali(char[]);
+int main()
+{
+    char s[100];
+    printf("Enter a string ");
+    gets(s);
+    pali(s);
+}
+void pali(char s[])
+{
+    int i, j;
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        if (s[i] >= '0' && s[i] <= '9')
+        {
+            puts("String contain digit only.");
+            return;
+        }
+        else
+        {
+            puts("The string contains non-digit characters.");
+            return;
+        }
+    }
+}
+================================================================================================================
+
+4)Anagrams
+Implement a function to check if two strings are anagrams of each other.
+Sample Input
+Input:
+
+First string: listen
+
+Second string: silent
+
+
+Input:
+
+First string: hello
+
+Second string: world
+Sample Output
+The strings are anagrams.
+
+Output:
+
+The strings are not anagrams.
+ans:
+#include <stdio.h>
+void anag(char[], char[]);
+int main()
+{
+    char a[100], b[100];
+    printf("Enter 1st string ");
+    gets(a);
+    printf("Enter 2nd string ");
+    gets(b);
+    anag(a, b);
+}
+void anag(char a[], char b[])
+{
+    int i, j, t;
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        for (j = i + 1; a[j] != '\0'; j++)
+        {
+            if (a[i] > a[j])
+            {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+            if (b[i] > b[j])
+            {
+                t = b[i];
+                b[i] = b[j];
+                b[j] = t;
+            }
+        }
+    }
+
+    for (i = 0; a[i] != '\0'; i++)
+    {
+        if (a[i] != b[i])
+        {
+            printf(" Not a Anagram");
+            return;
+        }
+    }
+    printf("Anagram");
+    return;
+}

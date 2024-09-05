@@ -62,10 +62,10 @@ int searchElement(int *arr, int size, int target)
         {
             return i;
         }
-        else if (target < *(arr + (i + 1)))
+        else if (target < *(arr + i))
         {
-            return i + 1;
+            return i;
         }
     }
-    return (size - 1) + (target - arr[size - 1]);
+    return (size - 1) + (target - *(arr + (size - 1)));
 }

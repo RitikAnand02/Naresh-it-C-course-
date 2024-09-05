@@ -1,41 +1,63 @@
 #include <stdio.h>
-// void main()
+// void userInput(int *, int);
+// void printArray(int *, int);
+// void rotateArray(int *, int, int);
+// void reverseArray(int *, int, int);
+// int main()
 // {
-//     int a[100], b[100], i, s1, s2, j;
-//     int *p = a;
+//   int size;
+//   printf("Enter array size : ");
+//   scanf("%d", &size);
 
-//     printf("Enter 1st array size 1 - 100 ");
-//     scanf("%d", &s1);
-//     printf("Enter %d integers for a array ", s1);
-//     for (i = 0; i < s1; i++)
-//         scanf("%d", &a[i]);
-//     printf("Enter 2nd array size 1 - 100 ");
-//     scanf("%d", &s2);
+//   int arr[size];
+//   printf("Enter %d element in array!!!\n", size);
+//   userInput(arr, size);
 
-//     printf("Enter %d integers for a array ", s2);
-//     for (i = 0; i < s2; i++)
-//         scanf("%d", &b[i]);
-//     for (i = s1, j = 0; j < s2; i++, j++)
-//         a[i] = b[j];
-//     for (i = 0; i < s1 + s2; i++)
-//     {
-//         for (j = i + 1; j < s1 + s2; j++)
-//         {
-//             if (p[i] > p[j])
-//             {
-//                 int t = p[i];
-//                 p[i] = p[j];
-//                 p[j] = t;
-//             }
-//         }
-//     }
-//     printf("Elements are ");
-//     for (i = 0; i < s1 + s2; i++)
-//         printf("%4d", a[i]);
-//     int len = s1 + s2, m;
-//     float sum = 0;
-//     for (i = 0; i < len; i++)
-//         sum += p[i];
-//     float result = sum / len;
-//     printf("\n median=%.2f", result);
+//   int pos;
+//   printf("Enter number of position to rotate : ");
+//   scanf("%d", &pos);
+
+//   printf("\nBefore reverse array : ");
+//   printArray(arr, size);
+
+//   rotateArray(arr, size, pos % size);
+//   printf("\nAfter reverse array : ");
+//   printArray(arr, size);
+//   return 0;
+// }
+
+// void userInput(int *arr, int size)
+// {
+//   for (int i = 0; i < size; i++)
+//   {
+//     printf("element - %d : ", i);
+//     scanf("%d", &arr[i]);
+//   }
+// }
+
+// void printArray(int *arr, int size)
+// {
+//   for (int i = 0; i < size; i++)
+//   {
+//     printf("%d ", *(arr + i));
+//   }
+// }
+
+// void reverseArray(int *arr, int start, int end)
+// {
+//   while (start < end)
+//   {
+//     int temp = *(arr + end);
+//     *(arr + end) = *(arr + start);
+//     *(arr + start) = temp;
+//     start++;
+//     end--;
+//   }
+// }
+
+// void rotateArray(int *arr, int size, int pos) // 1 2 3 4 5 //s=5, pos = 2
+// {
+//   reverseArray(arr, 0, size - 1);   // 5 4 3 2 1
+//   reverseArray(arr, 0, pos - 1);    // 4 5 3 2 1
+//   reverseArray(arr, pos, size - 1); // 4 5 1 2 3
 // }
