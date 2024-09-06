@@ -26,7 +26,7 @@ int main()
 }
 int sum(int n)
 {
-    int a[100], i, j, s = 0;
+    int a[100], i,s = 0;
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
     for (i = 0; i < n; i++)

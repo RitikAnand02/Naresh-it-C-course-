@@ -20,28 +20,26 @@ The string contains non-digit characters.
 */
 
 #include <stdio.h>
-void pali(char[]);
+void digit(char[]);
 int main()
 {
     char s[100];
     printf("Enter a string ");
     gets(s);
-    pali(s);
+    digit(s);
 }
-void pali(char s[])
+void digit(char s[])
 {
-    int i, j;
+    int i, j, flag = 1;
     for (i = 0; s[i] != '\0'; i++)
     {
         if (s[i] >= '0' && s[i] <= '9')
-        {
-            puts("String contain digit only.");
-            return;
-        }
+            ;
         else
         {
-            puts("The string contains non-digit characters.");
-            return;
+            flag = 0;
+            break;
         }
     }
+    printf("%s contain %s ", s, flag ? "only digits" : "non-digit");
 }
