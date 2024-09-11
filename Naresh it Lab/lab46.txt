@@ -1,0 +1,239 @@
+Que 1 : Develop a C program that simulates a simple bank account system. Users can create accounts, deposit money, withdraw money, and check their balances. Implement separate functions for these operations. Take the initial balance as Rs.2000.
+--------
+
+Condition For deposit :
+
+* If the user want to deposit 0 or negetive amount then print "Invalid amount to deposit"
+
+
+Condition For withdraw : 
+
+* If the user want to withdraw 0 or negetive amount then print "Invalid amount to withdrawal"
+
+* If the user given amount is greater than the balance then print "Insufficient Funds"
+
+
+SAMPLE INPUT AND SAMPLE OUTPUT :
+--------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 1
+
+Account created successfully with initial balance of Rs. 2000.
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 2
+
+Enter amount to deposit: 1500
+
+Rs. 1500 deposited successfully.
+Your current balance is: Rs. 3500
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 2
+
+Enter amount to deposit: -500
+
+Invalid amount to deposit
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 3
+
+Enter amount to withdraw: 1000
+
+Rs. 1000 withdrawn successfully.
+Your current balance is: Rs. 2500
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 3
+
+Enter amount to withdraw: -300
+
+Invalid amount to withdraw
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 3
+
+Enter amount to withdraw: 3000
+
+Insufficient Funds
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 4
+
+Your current balance is: Rs. 2500
+-------------------------------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 5
+
+Thank you for using our banking system.
+=====================================================================
+
+
+Que 2 : Write a C program to find all the Armstrong number in beetween 100 to 10000 by using function. 
+--------
+
+-> create int main() function.
+-> create bool isArmstrong(int n) function
+-> create int countDigits(int n) function
+-> create int power(int base, int exp) function
+
+Sample input : n1 = 1 and n2 = 10000
+
+Sample output : 
+Armstrong numbers between 100 and 10000 are:
+
+153
+
+370
+
+371
+
+407
+
+1634
+
+8208
+
+9474
+ans:
+#include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
+
+bool armstrong(int n);
+int countDigits(int n);
+
+int main()
+{
+    printf("Armstrong numbers between 100 and 10000 are:\n");
+    armstrong(0);
+    return 0;
+}
+
+bool armstrong(int n)
+{
+    int n1, rem, result, digits;
+
+    for (n = 100; n <= 10000; n++)
+    {
+        n1 = n;
+        result = 0;
+        digits = countDigits(n);
+
+        while (n1 != 0)
+        {
+            rem = n1 % 10;
+            result += pow(rem, digits);
+            n1 /= 10;
+        }
+
+        if (result == n)
+        {
+            printf("%d\n", n);
+        }
+    }
+}
+
+int countDigits(int n)
+{
+    int count = 0;
+    while (n != 0)
+    {
+        n /= 10;
+        count++;
+    }
+    return count;
+}
+
+
+
+============================================================================
+
+Que 3 : Write a C program that finds the largest element in an array of integers using function.
+--------
+
+-> create int main() function.
+-> create int largestEle(int arr[]) function.
+-> in main function read size of array and based on size create new array.
+-> store size elements into array and call largestEle function by passing array as input.
+-> largestEle function will perform the operation and will return largest element of array to the main function.
+-> in the main function recive the result and print the output. 
+
+Sample input : n = 7
+               arr[]={1,100,2,3,55,3,2}
+
+Sample output : Largest element of array is : 100
+ans:
+#include <stdio.h>
+int largest(int n);
+int main()
+{
+    int n;
+    printf("Enter array size ");
+    scanf("%d", &n);
+    printf("Enter %d elements ", n);
+    largest(n);
+    return 0;
+}
+
+int largest(int n)
+{
+    int a[n], i, max = 0;
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    for (i = 0; i < n; i++)
+        if (a[i] > max)
+        {
+            max = a[i];
+        }
+    printf("The largest element is : %d", max);
+    return 0;
+}

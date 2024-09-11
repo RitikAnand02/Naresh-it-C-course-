@@ -11,20 +11,23 @@ Sample output : 2024 is a leap year.
 */
 
 #include <stdio.h>
-void leap(int n);
+#include <stdbool.h>
+bool leap(int n);
 int main()
 {
     int n;
     printf("Enter a year: ");
     scanf("%d", &n);
     leap(n);
+    return 0;
 }
-void leap(int n)
+bool leap(int n)
 {
     if (n % 100 == 0)
     {
         if (n % 400 == 0)
             printf(" %d is a leap year", n);
+
         else
             printf("% is not a leap year", n);
     }
@@ -34,6 +37,6 @@ void leap(int n)
 
             printf("%d is a leap year", n);
         else
-            printf("%d  is not a leap year", n);
+            printf("%d is not a leap year", n);
     }
 }
