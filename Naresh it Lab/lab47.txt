@@ -1,0 +1,575 @@
+1)What is the output of following program?
+#include<stdio.h>
+int add(int x, int y) {
+int sum = x + y;
+return sum;
+}
+
+int main() {
+int result = add(5, 3);
+printf("%d", add(result, 2));
+return 0;
+}
+
+A)10
+
+B)8
+
+C)7
+
+D)Compilation Error
+
+Ans-->A
+
+--------------------------------------------------------------------
+2)Which of the following is true about the “main” function in C?
+
+
+A)It is required in every C program.
+
+B)It can be defined with any return type.
+
+C)It is optional in C programs.
+
+D)It cannot call other functions.
+
+Ans-->A
+-------------------------------------------------------------------
+3)What will be the output of the program ?
+int square(int n) {
+return n * n;
+}
+
+int main() {
+int x = 2, y = 3;
+printf(“%d”, square(x + y));
+return 0;
+
+A)Garbage Value
+
+B)4
+
+C)9
+
+D)25
+
+ans-->D
+---------------------------------------------------------------------------------------
+
+4) What is the output of this program?
+#include<stdio.h>
+int sum(int x, int y) {
+return x + y;
+}
+
+int main() {
+int a = 5, b = 10, c = 15;
+printf("%d", sum(a, sum(b, c)));
+return 0;
+
+}
+
+A)15
+
+B)30
+
+C)20
+
+D)CopileTime Error
+
+Ans-->B
+-------------------------------------------------------------------------------------
+
+5)What is a function in C?
+
+
+A)A reserved keyword
+
+B)A block of code that performs a specific task
+
+C)return the value
+
+D) A & C
+
+Ans-->B
+------------------------------------------------------------------------------------
+6)What is the output of this program?
+#include <stdio.h>
+void swap(int a, int b) 
+{
+int temp = a;
+a = b;
+b = temp;
+}
+
+int main() {
+int x = 5, y = 10;
+swap(x, y);
+printf("x: %d, y: %d", x, y);
+return 0;
+}
+
+
+
+A)x: 5, y: 10
+
+B)x: 10, y: 5
+
+C)Compilation Error
+
+D)Undefined behavior
+
+Ans--> A
+--------------------------------------------------------------------------------------
+7)Find out the error in the below program?
+int multiply(int x, int y) {
+return x * y;
+}
+
+int main() {
+int result = multiply(3, 5);
+result-=5;
+printf("%d", multiply(result, 2));
+return 0;
+
+}
+A)30
+
+B)10
+
+C)20
+
+D)Compilation Error
+
+Ans--> C
+
+-------------------------------------------------------------------------------------
+
+8)Find the output of below code?
+
+#include <stdio.h>
+void Arr(int arr[]) {
+    
+return arr[0];
+}
+
+int main() {
+    int arr[6]={1,2,3,4,5,6};
+    int n = Arr(arr);
+printf("%d", n );
+
+
+return 0;
+}
+
+A) 0
+
+B)1
+
+C)No output
+
+D) Compile-Time Error
+
+Ans-->D
+--------------------------------------------------------------------------
+9)Find the output of below code?
+
+#include <stdio.h>
+int Arr(int arr[]) {
+    
+return SumOfArray(arr);
+}
+int SumOfArray(int arr[])
+{
+    int sum=0;
+    for(int i=1;i<6;i++)
+    {
+        sum+=arr[i];
+    }
+    return sum;
+}
+int main() {
+    int arr[6]={1,2,3,4,5,6};
+    int n = Arr(arr);
+printf("%d", n );
+return 0;
+}
+
+A)21
+
+B)20
+
+C)Compile-Time Error
+
+D)0
+
+Ans-->B
+----------------------------------------------------------------------------
+10)What is the correct way to write a function in C that takes no arguments and returns value ?
+
+A)int fun(){}
+
+B)void fun(){}
+
+C)void fun(int){}
+
+D)int fun(int a){}
+
+Ans-->B
+------------------------------------------------------------------------------
+
+11)What will be the output of the C program?
+#include<stdio.h>
+int abc(int i)
+{
+	return i++;
+}
+int main()
+{
+	int i = abc(10);
+	printf("%d",--i);
+}
+
+A)10
+
+B)9
+
+C)11
+
+D)none of these
+
+Ans-->B
+------------------------------------------------------------------------------------
+
+12)What is the output of the code strip below?              
+                       
+#include <stdio.h>
+
+void main(int a ,int b)
+{
+    printf("User-defined function \n");
+    printf("sum => %d ",a+b);
+}
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    
+    printf("Pre-defined function\n");
+    main(a,b);
+    return
+}
+
+A)Pre-defined function
+  User-defined function
+  sum => 30
+
+B) Pre-defined function
+
+C)No output
+
+D)Compile-Time error
+
+Ans-->D
+----------------------------------------------------------------------------------
+
+13)What is the output of the following program?
+#include <stdio.h>
+int demo(int i)
+{
+  
+  printf("%d ",i++);
+  return 0;
+}
+int main()
+{
+  for(int j = 0 ; j < 5 ; j++ )
+  {
+      demo(j);
+  }
+}
+
+A) 0 0 0 0 0
+
+B) 1 1 1 1 1
+
+C)1 2 3 4 5
+
+D) 0 1 2 3 4
+
+ans --> D
+---------------------------------------------------------------------------
+
+14)What is the output of the following code?
+#include <stdio.h>
+int change(int a)
+{
+printf("%d", ++a);
+return 0;
+}
+int main ()
+{
+    int  a = 4;
+    {
+        change(a);
+    }
+   printf ("%d", a);
+   return 0;
+}
+
+A)55
+
+B)45
+
+C)54
+
+D)4
+
+ans-->C
+-----------------------------------------------------------------------
+
+15)What will be the output of the C program?
+
+#include<stdio.h>
+main()
+{
+    char s[25] = "The cocaine man";
+    int i=0;
+    char ch;
+    ch = s[++i];
+    printf("%c", ch);
+    ch = s[i++];
+    printf("%c", ch);
+    ch = s[i++];
+    printf("%c",ch);
+    ch = ++s[i];
+    printf("%c", ch);
+    return 0;
+}
+A)hhe!
+B)he c
+C)The c
+D)Hhec
+
+ans-->A
+------------------------------------------------------------------------------------
+
+
+                                                       Set-A
+                                                      =========
+
+1)Write a C program to calculate the sum of all elements in an integer array (5 marks)
+   Sample input:
+              Size of the array: 5
+              Array elements: 10 20 30 40 50
+
+
+   Sample output: Sum of all elements in the array: 150
+
+-----------------------------------------------------------------------------------------------------------------------------------   
+2)Write a C program to check given String is palindrom or not (5 marks)
+  Sample input : radar
+  Sample output : The string is a palindrome.
+
+Sample input : hello
+Sample output : The string is not a palindrome.
+
+
+------------------------------------------------------------------------------------------------------------------------------   
+3)Write  a program  in c to convert a given string to an integer using function.(10 marks)
+-> create int main() function.
+
+int stringToInt(char str[]) function.
+
+Example:-
+
+Sample input: Enter a string: "12345"
+
+Sample output: Integer value: 12345
+
+-----------------------------------------------------------------------------------------------------------------------------   
+4) Write a C program to check  two strings are anagrams of each other or not using String (15 marks)
+
+Sample input:
+             First string : listen
+             Second string: silent
+
+Sample output: The strings are anagrams.
+
+
+Sample input:
+             First string : hello
+             Second string: world
+
+Sample output: The strings are not anagrams.
+
+-----------------------------------------------------------------------------------------------------------------------------------                                                                 
+                                                                Set-B
+                                                            =========
+1)Write a C program that finds the largest element in an array of integers.(5 marks)
+Sample input : n = 7
+               arr[]={1,100,2,3,55,3,2}
+
+Sample output : Largest element of array is : 100
+
+-----------------------------------------------------------------------------------------------------------------------------------   
+2)Write a function to find the index of the first occurrence of a character in a string.(5 marks)
+Sample input: Enter a string: programming
+              Enter a character to find: m
+
+Sample output: Character 'm' found at index: 7
+-------------------------------------------------------------------------------------------------------------------------------   3)Write a function to find the average of elements in a floating-point array using function.(10 marks)
+-> create int main() function.
+
+-> create float getMid(int arr[]) function.
+Sample input:
+Size of the array: 5
+Array elements: 10.5 20.5 30.5 40.5 50.5
+
+Sample output:
+Average of the elements in the array: 30.5
+
+------------------------------------------------------------------------------------------------------------------------------- 
+ 4)Write a C program to print all twisted prime number from array.(15 marks)
+Twisted Prime number means a number itself is prime number and the reverse of that number also prime number.
+Examle : 2,5,7,11,23 
+-----> here 2,5,7,11 are twisted prime numbers but 23 is not twisted prime number.
+Sample input : int arr[]={1,2,3,4,5,7,11,15,23};
+
+Sample output : twisted prime numbers are : 2,3,5,7,11
+
+-----------------------------------------------------------------------------------------------------------------------------------                                                                 
+                                                               Set-C
+                                                           ===========
+------------------------------------------------------------------------------------------------------------------------------
+1) Write a C program to check  a string contains only digits or not.(5 marks)
+Sample input  : 12345
+Sample output : The string contains only digits.
+
+Sample input : 45A7
+Sample output : The string contains non-digit characters.
+
+-----------------------------------------------------------------------------------------------------------------------------------   
+2) Write a C program to find all the Armstrong number in beetween 100 to 10000 (5 marks)
+Sample input : n1 = 1 and n2 = 10000
+Sample output : 
+Armstrong numbers between 100 and 10000 are:
+
+153
+
+370
+
+371
+
+407
+
+1634
+
+8208
+
+9474
+------------------------------------------------------------- -------------------------------------------------------------------
+ 3)Write a C program to check  a given year is a leap year or not using function.(10 marks)
+-> create int main() function
+
+-> create bool isLeapYear(int year) function. this function will take year as parameter suppied by main function and will check the year is leap year or not. if year is leap then return true otherwise false.
+
+Sample input : Enter a year: 2024
+
+Sample output : 2024 is a leap year.
+----------------------------------------------------------------------------------------------------------------------------   
+4)Develop a C program that simulates a simple bank account system. Users can create accounts, deposit money, withdraw money, and check their balances. Implement separate functions for these operations. Take the initial balance as Rs.2000.(15 marks)
+
+Condition For deposit :
+
+* If the user want to deposit 0 or negetive amount then print "Invalid amount to deposit"
+
+
+Condition For withdraw : 
+
+* If the user want to withdraw 0 or negetive amount then print "Invalid amount to withdrawal"
+
+* If the user given amount is greater than the balance then print "Insufficient Funds"
+
+SAMPLE INPUT AND SAMPLE OUTPUT :
+--------------------------------
+
+--- Bank Account Menu ---
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. Exit
+Enter your choice: 1
+
+Account created successfully with initial balance of Rs. 2000.
+
+-----------------------------------------------------------------------------------------------------------------------------------     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
