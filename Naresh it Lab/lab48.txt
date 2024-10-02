@@ -1,0 +1,304 @@
+
+batch 38 for 30 multiple-choice questions (MCQs) on HTML:
+
+1. What does HTML stand for?
+A) Hyper Text Markup Language
+B) Hyperlinks and Text Markup Language
+C) Home Tool Markup Language
+D) Hyperlinking Text Mark Language
+Answer: A) Hyper Text Markup Language
+------------------------------------------
+2. Which HTML element is used to define a header for a document or section?
+A) <header>
+B) <head>
+C) <h1>
+D) <section>
+Answer: A) <header>
+------------------------------------------
+3. What is the correct HTML element for inserting a line break?
+A) <br>
+B) <lb>
+C) <break>
+D) <hr>
+Answer: A) <br>
+------------------------------------------
+4. Which HTML tag is used to define an internal style sheet?
+A) <style>
+B) <script>
+C) <css>
+D) <link>
+Answer: A) <style>
+------------------------------------------
+5. Which is the correct HTML element for the largest heading?
+A) <head>
+B) <heading>
+C) <h1>
+D) <h6>
+Answer: C) <h1>
+------------------------------------------
+6. How can you create an email link in HTML?
+A) <a href="email">
+B) <a href="mailto:someone@example.com">
+C) <mail>
+D) <a href="someone@example.com">
+Answer: B) <a href="mailto:someone@example.com">
+------------------------------------------
+7. How can you make a numbered list?
+A) <ol>
+B) <ul>
+C) <list>
+D) <dl>
+Answer: A) <ol>
+------------------------------------------
+8.What does CSS stand for?
+A) Computer Style Sheets
+B) Creative Style Sheets
+C) Cascading Style Sheets
+D) Colorful Style Sheets
+Answer: C) Cascading Style Sheets
+------------------------------------------
+9. Which HTML attribute is used to define inline styles?
+A) font
+B) styles
+C) class
+D) style
+Answer: D) style
+------------------------------------------
+10. What is the correct HTML for creating a hyperlink?
+A) <a name="http://www.example.com">Example</a>
+B) <a href="http://www.example.com">Example</a>
+C) <a url="http://www.example.com">Example</a>
+D) <a>http://www.example.com</a>
+Answer: B) <a href="http://www.example.com">Example</a>
+------------------------------------------
+11.Which property is used to change the text color of an element?
+A) text-color
+B) color
+C) font-color
+D) text-style
+Answer: B) color
+------------------------------------------
+12. How can you open a link in a new tab?
+A) <a href="url" target="_new">
+B) <a href="url" target="_blank">
+C) <a href="url" new_tab>
+D) <a href="url" target="tab">
+Answer: B) <a href="url" target="_blank">
+------------------------------------------
+13. Which tag is used to define a list item in HTML?
+A) <list>
+B) <li>
+C) <item>
+D) <ol>
+Answer: B) <li>
+------------------------------------------
+14. What is the correct HTML for adding a background color?
+A) <body style="background-color:yellow;">
+B) <body bg="yellow">
+C) <background>yellow</background>
+D) <body background-color:yellow>
+Answer: A) <body style="background-color:yellow;">
+------------------------------------------
+15. Which tag is used to define a table row in HTML?
+A) <tr>
+B) <td>
+C) <table>
+D) <row>
+Answer: A) <tr>
+------------------------------------------
+16. How do you define an unordered list?
+A) <ol>
+B) <ul>
+C) <li>
+D) <dl>
+Answer: B) <ul>
+------------------------------------------
+17. Which HTML attribute specifies an alternate text for an image if it cannot be displayed?
+A) title
+B) alt
+C) src
+D) href
+Answer: B) alt
+------------------------------------------
+18. How do you select an element with id "header" in CSS?
+A) #header
+B) .header
+C) header
+D) header
+Answer: A) #header
+------------------------------------------
+19. Which HTML element is used to specify a footer for a document or section?
+A) <footer>
+B) <foot>
+C) <bottom>
+D) <end>
+Answer: A) <footer>
+------------------------------------------
+20. How do you create a checkbox in HTML?
+A) <input type="checkbox">
+B) <input checkbox>
+C) <checkbox>
+D) <input type="check">
+Answer: A) <input type="checkbox">
+------------------------------------------
+21.How can you make a list that lists its items with squares?
+A) list-style-type: circle;
+B) list-style-type: square;
+C) list-type: square;
+D) list-style: square;
+
+Answer: B) list-style-type: square;
+------------------------------------------
+22. What is the purpose of the <meta charset="UTF-8"> tag?
+A) To link to external files
+B) To define the character set
+C) To create navigation
+D) To define image size
+Answer: B) To define the character set
+------------------------------------------
+23. How can you make text bold in HTML?
+A) <bold>
+B) <b>
+C) <strong>
+D) Both B and C
+Answer: D) Both B and C
+------------------------------------------
+24. Which HTML tag is used to define a navigation link section?
+A) <nav>
+B) <link>
+C) <menu>
+D) <navigate>
+Answer: A) <nav>
+------------------------------------------
+25. How do you define a table header cell?
+A) <td>
+B) <tr>
+C) <th>
+D) <head>
+Answer: C) <th>
+------------------------------------------
+26. What is the correct syntax to create a text area in HTML?
+A) <textarea rows="4" cols="50">
+B) <input type="textarea" rows="4" cols="50">
+C) <text> rows="4" cols="50"
+D) <textbox rows="4" cols="50">
+Answer: A) <textarea rows="4" cols="50">
+------------------------------------------
+27. Which tag is used to define a client-side script in HTML?
+A) <script>
+B) <client>
+C) <code>
+D) <link>
+Answer: A) <script>
+------------------------------------------
+28. How do you make an image a clickable link?
+A) <a href="url"><img src="image.jpg"></a>
+B) <img href="url">
+C) <img link="url">
+D) <a img="url">
+Answer: A) <a href="url"><img src="image.jpg"></a>
+------------------------------------------
+29.How do you center a block element in CSS?
+A) margin: auto;
+B) text-align: center;
+C) display: center;
+D) position: center;
+Answer: A) margin: auto;
+------------------------------------------
+30. What is the purpose of the <fieldset> tag?
+A) To group form elements
+B) To create a border around a form
+C) To set the field size
+D) To create a text field
+Answer: A) To group form elements
+-----------------------------------------------------------------------------------------------------------------------------------
+[SET-A]
+
+1.write a c program to print below program ? (Marks 10)
+	    A
+          A B A
+        A B C B A
+      A B C D C B A
+    A B C D E D C B A  
+
+2. Write a C program to input elements in two array and merge two array to third array and sort . (Marks  10)
+
+  Input :
+	Enter first array elements: 1, 4, 6, 9, 15
+	Enter second array elements: 2, 5, 8, 10
+
+output : Merged array in ascending order = 1, 2, 4, 5, 6, 8, 9, 10, 15
+3. write a program print all Odd & Even numbers separate.(Marks 10)
+
+input : -
+1 2 3 4 5 6 7 8 9 
+
+Output:-
+Odd Elements 1 3 5 7 9
+Even Elements 2 4 6 8 
+-----------------------------------------------------------------------------------------------------------------------------------
+[SET-B]
+
+1.You are required to write a C program that finds the nth minimum and nth maximum values in a given array of integers. (Marks 10)
+Given Array:
+
+intput :-
+Enter array size :
+7
+Enter 7 elements :
+  5 1 2 3 9 13 7
+
+Enter nth min number 
+3
+Enter nth max number
+4
+
+Output as: 
+The Minimum elements : 3
+The Maximum elements : 5
+
+2. write a c program to print below program ? (Marks 10)
+
+
+		      1
+                   2  1	 2
+	        3  2  1	 2  3
+             4  3  2  1  2  3  4
+          5  4  3  2  1  2  3  4  5
+
+3.Write a program in C to find the number occurring odd number of times in an array.
+All numbers occur even number of times except one number which occurs odd number of times.(Marks 10)
+Expected Output :
+The given array is : 8 3 8 5 4 3 4 3 5 8
+Output:
+The element odd number of times is : 3 8
+-----------------------------------------------------------------------------------------------------------------------------------
+[SET-C]
+
+1.write a c program to print below pattern? (marks 10)
+	A 0 C 0 
+	B 0 D 0
+	C 0 E 0
+ 	D 0 F 0
+	E 0 G 0
+2.write a c program print all the prime number in array(Marks 5)
+
+input - [1 2 3 4 5 6 7 11] 
+
+output - 2 3 5 11
+
+3.Write a program in C to find the majority element of an array.(Marks 15)
+input 1:
+Enter a elements : 1 3 3 7 4 3 2 3 3
+output:
+The majority of the Element : 3
+
+input 2:
+Enter a elements : 1 3 1 7 4 3 2 1 
+output:
+The majority of the Element : 1
+
+
+
+
+
